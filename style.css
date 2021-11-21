@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0px;
+    background-color: #262626;
+}
+
+div {
+    font-size: 12px;
+    line-height: 12px;
+    color: white;
+}
+
+.content {
+    font-size: 8px;
+    line-height: 8px;
+    background: url(https://i.imgur.com/w8hBLKQ.jpg);
+    background-position: center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-attachment: fixed;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
