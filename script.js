@@ -8,7 +8,7 @@ var lyricsDiv = $('#lyrics');
 var timeoutSuggest;
 lyricsDiv.hide();
 results.hide();
-searchInput.on('input', function() {
+searchInput.on('input', function () {
   results.slideUp();
   if (timeoutSuggest) {
     clearTimeout(timeoutSuggest);
@@ -50,7 +50,7 @@ function suggestions() {
     var l = finalResults.length;
     finalResults.forEach(function (result, i) {
       var c = 'result';
-      if (i == l-1) {
+      if (i == l - 1) {
         c += ' result-last';
       }
       var e = $('<li class="' + c + '">' + result.display + '</li>');
@@ -70,11 +70,11 @@ function songLyrics(song) {
   $.getJSON(apiUrl + '/v1/' + song.artist + '/' + song.title, function (data) {
     var html = '<h3 class="lyrics-title">' + song.display + '</h3>';
     html += '<div class="copy-lyrics" id="copy-lyrics" data-clipboard-target="#thelyrics">Copy lyrics <span id="copy-ok"></span></div>';
-    html += '<div id="thelyrics">' + data.lyrics.replace(/\n/g, ' ') + '</div>';
+    html += '<div id="thelyrics">' + data.lyrics.replace(/\n/g, ' ') + data.lyrics.replace(/\n/g, ' ') + data.lyrics.replace(/\n/g, ' ') + '</div>';
     lyricsDiv.html(html);
     lyricsDiv.slideDown();
     var copyl = new Clipboard('#copy-lyrics');
-    copyl.on('success', function(e) {
+    copyl.on('success', function (e) {
       e.clearSelection();
       $('#copy-ok').text(' : Done');
     });
