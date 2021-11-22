@@ -31,6 +31,7 @@ font-family: 'Viga', sans-serif;
 padding: 40px;
 color: #2282ff;
 letter-spacing: 1px;
+line-height: 44px;
 }
 
 .title-name {
@@ -151,4 +152,5 @@ color: #aaa;
 display: inline-block;
 margin-left: 20px;
 margin-right: 20px;
+line-height: 26px;
 }

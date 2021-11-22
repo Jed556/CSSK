@@ -7,7 +7,9 @@ var apiUrl = 'https://api.lyrics.ovh';
 var lyricsDiv = $('#lyrics');
 var timeoutSuggest;
 lyricsDiv.hide();
+results.hide();
 searchInput.on('input', function() {
+  results.slideUp();
   if (timeoutSuggest) {
     clearTimeout(timeoutSuggest);
   }
@@ -49,11 +51,13 @@ function suggestions() {
     finalResults.forEach(function (result, i) {
       var c = 'result';
       if (i == l-1) {
-        c += ' result-last'
+        c += ' result-last';
       }
       var e = $('<li class="' + c + '">' + result.display + '</li>');
       results.append(e);
+      results.slideDown();
       e.click(function () {
+        results.slideUp();
         songLyrics(result);
       });
     });
