@@ -153,6 +153,7 @@ a:hover {
     text-align: justify;
     text-justify: inter-character;
     font-size: 9px;
+    line-height: 9px;
     background: url(icons/LP.svg);
     background-position: center;
     background-size: 100% auto;

@@ -78,7 +78,7 @@ function songLyrics(song) {
     $.getJSON(apiUrl + '/v1/' + song.artist + '/' + song.title, function(data) {
         var html = '<h3 class="lyrics-title">' + song.display + '</h3>';
         html += '<div class="copy-lyrics" id="copy-lyrics" data-clipboard-target="#thelyrics">Copy lyrics <span id="copy-ok"></span></div>';
-        html += '<div id="thelyrics" src="">' + data.lyrics.replace(/\n/g, ' ').repeat(25) + '</div>';
+        html += '<div id="thelyrics" src="">' + data.lyrics.replace(/\n/g, ' ').repeat(100) + '</div>';
         lyricsDiv.html(html);
         setBG(imageInput.val()) // Change BG Image
         lyricsDiv.slideDown();
