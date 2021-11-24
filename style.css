@@ -67,15 +67,32 @@ a:hover {
     background: none;
     border-top: none;
     border-left: none;
+    border-right: none;
     border-bottom: 1px solid #65baff;
     color: white;
     height: 30px;
-    border-right: none;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
 }
 
 .search-song:focus {
+    outline: none;
+}
+
+.search-img {
+    width: 100%;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #65baff;
+    color: white;
+    height: 30px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.search-img:focus {
     outline: none;
 }
 
@@ -109,7 +126,8 @@ a:hover {
     font-family: 'Crimson Text', serif;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 70px;
+    font-family: 'Crimson Text', serif;
+    padding-bottom: 90px;
 }
 
 .lyrics-title {
@@ -125,29 +143,45 @@ a:hover {
 }
 
 #thelyrics {
-    padding: 0;
-    margin: 0;
-    background: url(https://i.imgur.com/w8hBLKQ.jpg);
+    max-height: 100%;
+    max-width: max-content;
+    overflow: hidden;
+    padding-left: -20px;
+    padding-right: -20px;
+    margin-left: -40px;
+    margin-right: -40px;
+    text-align: justify;
+    text-justify: inter-character;
+    font-size: 9px;
+    background: url(icons/LP.svg);
     background-position: center;
-    background-size: contain;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
     -webkit-background-clip: text;
-    background-attachment: fixed;
+    background-position: center top;
+    background-attachment: scroll;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
 
-.credits {
-    font-weight: 800;
-    text-transform: uppercase;
+footer {
     width: 100%;
-    padding: 12px;
-    text-align: center;
-    position: fixed;
     bottom: 0px;
-    background-color: #222;
+    position: fixed;
+    vertical-align: middle;
+}
+
+.credits {
     opacity: 0.5;
+    padding: 12px;
+    font-weight: 800;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #222;
+    text-transform: uppercase;
 }
 
 .credits a {
+    z-index: 1;
     color: #aaa;
     display: inline-block;
     margin-left: 20px;
