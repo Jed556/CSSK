@@ -1,3 +1,5 @@
+/* CSS Lyrics Text Portrait by Jed556 */
+
 html {
     height: 100%;
 }
@@ -11,6 +13,9 @@ body {
     min-height: 100%;
     position: relative;
 }
+
+
+/* Title */
 
 a {
     text-decoration: none;
@@ -56,6 +61,9 @@ a:hover {
     font-style: italic;
     letter-spacing: 1px;
 }
+
+
+/* Search Bars */
 
 .search {
     margin: 20px;
@@ -121,6 +129,9 @@ a:hover {
     border-bottom: none;
 }
 
+
+/* Song Lyrics */
+
 .lyrics {
     margin: 20px;
     font-family: 'Crimson Text', serif;
@@ -163,6 +174,9 @@ a:hover {
     background-attachment: scroll;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
+
+
+/* Footer */
 
 footer {
     width: 100%;

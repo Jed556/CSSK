@@ -1,12 +1,14 @@
+// CSS Lyrics Text Portrait by Jed556
 'use strict';
 
-var searchInput = $('#search-input');
-var imageInput = $('#image-input');
-var results = $('#results');
 var apiUrl = 'https://api.lyrics.ovh';
 // var apiUrl = 'http://localhost:8080';
+var searchInput = $('#search-input');
+var imageInput = $('#image-input');
 var lyricsDiv = $('#lyrics');
+var results = $('#results');
 var timeoutSuggest;
+
 lyricsDiv.hide();
 results.hide();
 
